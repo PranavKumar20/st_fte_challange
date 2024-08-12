@@ -11,7 +11,7 @@ const Dashboard = () => {
   const [editingBanner, setEditingBanner] = useState(null);
 
   const fetchBanners = () => {
-    axios.get("http://localhost:3000/api/getallbanners")
+    axios.get("https://st-fte-challange.onrender.com/api/getallbanners")
       .then((response) => {
         const sortedBanners = response.data.banners.sort((a, b) => a.id - b.id);
         setBanners(sortedBanners);
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   const handleEditorSubmit = () => {
     closeEditor();
-    fetchBanners(); // Fetch and sort banners after update
+    fetchBanners(); 
   };
 
   return (
@@ -70,7 +70,7 @@ const Dashboard = () => {
               <span>Visibility: {banner.visibility ? "On" : "Off"}</span>
             </div>
             <div className="flex items-center">
-              <span className="mr-2">Link: <a href={`https://domain/banner/${banner.id}`} className="text-blue-500">https://domain/banner/{banner.id}</a></span>
+              <span className="mr-2">Link: <a href={`https://banner-0155.netlify.app/banner/${banner.id}`} className="text-blue-500">https://banner-0155.netlify.app/banner/{banner.id}</a></span>
               <BsBoxArrowUpRight className="cursor-pointer text-blue-500" onClick={() => navigateToBannerPage(banner.id)} />
             </div>
             <button

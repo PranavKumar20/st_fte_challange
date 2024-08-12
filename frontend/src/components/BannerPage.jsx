@@ -9,7 +9,7 @@ const BannerPage = () => {
   const [banner, setBanner] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/getbanner/${id}`)
+    axios.get(`https://st-fte-challange.onrender.com/api/getbanner/${id}`)
       .then((response) => {
         setBanner(response.data.banner);
       })

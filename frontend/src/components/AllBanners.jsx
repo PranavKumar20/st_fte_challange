@@ -9,7 +9,7 @@ function AllBanners() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/getallbanners")
+      .get("https://st-fte-challange.onrender.com/api/getallbanners")
       .then((response) => {
         setBanners(response.data.banners);
       })

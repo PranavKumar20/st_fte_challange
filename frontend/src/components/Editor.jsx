@@ -19,7 +19,7 @@ const Editor = ({ isUpdate, banner, onSubmit }) => {
   const handleCreate = () => {
     const data = { desc, timer: parseInt(timer, 10), visibility, type };
     axios
-      .post("http://localhost:3000/api/postbanner", data)
+      .post("https://st-fte-challange.onrender.com/api/postbanner", data)
       .then(() => onSubmit())
       .catch((error) => console.error("Error creating banner:", error));
   };
@@ -27,7 +27,7 @@ const Editor = ({ isUpdate, banner, onSubmit }) => {
   const handleUpdate = () => {
     const data = { desc, timer: parseInt(timer, 10), visibility, type, id: banner.id };
     axios
-      .put("http://localhost:3000/api/updatebanner", data)
+      .put("https://st-fte-challange.onrender.com/api/updatebanner", data)
       .then(() => onSubmit())
       .catch((error) => console.error("Error updating banner:", error));
   };

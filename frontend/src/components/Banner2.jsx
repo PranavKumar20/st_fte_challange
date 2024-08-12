@@ -22,7 +22,7 @@ const Banner2 = ({ id, desc, t, type, visibility }) => {
 
   function setOff(){
     const data = {id, visibility: false};
-    axios.put("http://localhost:3000/api/updatebanner", data)
+    axios.put("https://st-fte-challange.onrender.com/api/updatebanner", data)
       .catch((error) => console.error("Error updating banner:", error));
   }
 
